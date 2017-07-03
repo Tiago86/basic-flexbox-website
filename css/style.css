@@ -1,0 +1,260 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+.padre{
+	display: flex; /*Inicia o display flex*/
+	flex-flow: column nowrap;/*Diz que o layout será em colunas e não quebrará*/
+}
+
+.margen-interno{
+	padding: 0 50px;
+}
+
+.header{
+	background: url(../imagenes/bg-2.jpeg);
+	background-position: center;/*Centralizar a imagem*/
+	background-attachment: contain;/*Define se a imagem irá rolar ou não com a tela*/
+	background-size: cover;/*Define a posição da imagem dentro do box*/
+	display: flex; /*Inicia o display flex*/
+	flex-flow: column nowrap;/*Diz que o layout será em colunas e não quebrará*/
+}
+
+.section{
+	background-color: #f7f7f7;
+	display: flex; /*Inicia o display flex*/
+}
+
+.menu{
+	background-color: rgba(0, 0, 0, .1);
+	display: flex; /*Inicia o display flex*/
+	flex-flow: row nowrap;/*Mostrar conteúdo na mesma linha e sem quebra*/
+	height: 100px;
+	align-items: center;/*Posiciona os elementos que estão dentro da classe menu no centro verticalmente*/
+	border-bottom: 1px solid rgba(255, 255, 255, .5); 
+}
+
+.footer{
+	background-color: #000;
+	display: flex; /*Inicia o display flex*/
+	justify-content: center;/*Alinha horizontalmente os blocos dentro do container pai*/
+	margin-top: 10px;
+}
+
+/*ESTILO DA CLASSE HEADER*/
+.logo{
+	
+	flex: 1 1 auto;/*Especifica o tamanho do bloco*/
+}
+
+.logo a{
+	color: #fff;
+	font-size: 30px;
+}
+
+.logo a:hover{
+	color: #343434;
+}
+
+.nav{
+	
+	flex: 5 1 auto;flex: 1 1 auto;/*Especifica o tamanho do bloco*/
+}
+
+.nav a{
+	color: #fff;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 0 10px;
+	letter-spacing: 2px;
+}
+
+.nav a:hover{
+	color: #343434;
+}
+.social{
+	display: flex;
+	flex: 1 1 auto;/*Especifica o tamanho do bloco*/
+}
+
+.social a{
+	color: #fff;
+	font-size: 18px;
+	padding: 0 5px;
+}
+
+.social a:hover{
+	color: #343434;
+}
+
+.text-principal{
+	/*background-color: #f07b3f;*/
+	height: 580px;
+	display: flex; /*Inicia o display flex*/
+	align-items: center;/*Posiciona os elementos que estão dentro da classe menu no centro verticalmente*/
+}
+
+h1{
+	font-family: 'Lora', serif;
+	color: #fff;
+	font-weight: 300;
+	text-align: center;
+	line-height: 1.6;
+	font-size: 21px; 
+}
+/*FIM ESTILO DA CLASSE HEADER*/
+
+/*ESTILO DA CLASSE SECTION*/
+.articulos{
+	background-color: #f7f7f7;
+	flex: 2 1 auto;/*Especifica o tamanho do bloco*/
+	display: flex;
+	flex-flow: row wrap;/*Especifica que se os blocos se esbarrarem por falta de espaço automaticamente terá a quebra de linha*/; 
+}
+
+.article{
+	color:#444;
+	font-size: 13px;
+	letter-spacing: 1px;
+	flex: 1 1 45%;/*Especifica o tamanho do bloco*/
+	margin:10px 10px 0 0;
+	background-color: #ececec;
+}
+
+.article img{
+	width: 100%;
+}
+
+.article a{
+	color: #fff;
+	font-size: 13px;
+	padding: 10px 10px;
+	background-color: #000;
+	margin: 10px 0;
+	display: inline-block;
+
+}
+
+.article a:hover{
+	background-color: #546cc3;
+}
+
+h3{
+	color: #fff;
+	font-size: 13px;
+	padding: 10px 0;
+	margin-top: -80px;
+}
+
+h2{
+	font-size: 25px;
+	text-transform: uppercase;
+	padding: 0 0 10px 0;
+	color: #fff;	
+}
+
+.navegacion{
+	background-color: #000;
+	flex: 1 1 100%;/*Especifica o tamanho do bloco*/
+	margin: 10px 10px 0 0;
+}
+
+.navegacion a{
+	color: #fff;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 0 10px;
+	letter-spacing: 2px;
+}
+
+.aside{
+	/*background-color: #f73f52;*/
+	flex: 1 1 auto;/*Especifica o tamanho do bloco*/
+	margin: 10px 5px 10px 0;
+}
+
+.aside img{
+	width: 100%;
+}
+
+h4{
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+.publicidad{
+	/*background-color: #ffea85;*/
+}
+/*FIM ESTILO DA CLASSE SECTION*/
+
+/*ESTILO DA CLASSE FOOTER*/
+.pie{
+	text-align: center;
+}
+
+.pie a{
+	color: #fff;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 0 10px;
+	letter-spacing: 2px;	
+}
+/*FIM ESTILO DA CLASSE FOOTER*/
+
+/*ESTILIZAÇÃO DA PARTE RESPONSIVA COM MEDIAS*/
+@media all and (max-width: 1120px){
+	.section{
+		flex-direction: column;
+	}
+
+	.menu{
+		flex-direction: column;/*Coloca um elemento abaixo de outro*/
+		height: auto;
+	}
+
+	.aside{
+		display: flex;
+		justify-content: center;
+	}
+	h1{
+		font-size: 15px;
+	}
+	.text-principal{
+		height:450px;
+	}
+}
+
+@media all and (max-width: 762px){
+	.articulos{
+		flex-direction: column;/*Coloca um elemento abaixo de outro*/
+	}
+}
+
+@media all and (max-width: 650px){
+	.off{
+		display: none;
+	}	
+
+	.nav a{
+		font-size: 25px;
+	}
+}
+
+@media all and (max-width: 400px){
+	.aside{
+		flex-direction: column;/*Coloca um elemento abaixo de outro*/
+	}
+}
+/*FIM ESTILIZAÇÃO DA PARTE RESPONSIVA COM MEDIAS*/
